@@ -1,0 +1,137 @@
+[
+  {
+    "course_id": "iGOT001",
+    "title": "Python for Data Analysis",
+    "provider": "IIT Madras",
+    "duration_hours": 20,
+    "skills_covered": ["Python", "Pandas", "NumPy", "Data Analysis"],
+    "level": "Intermediate",
+    "description": "Learn Python programming for statistical data analysis"
+  },
+  {
+    "course_id": "iGOT002",
+    "title": "SDG Indicators and Reporting",
+    "provider": "UN Statistics Division",
+    "duration_hours": 15,
+    "skills_covered": ["SDG Indicators", "Metadata", "Reporting"],
+    "level": "Basic",
+    "description": "Understanding Sustainable Development Goal indicators"
+  },
+  {
+    "course_id": "iGOT003",
+    "title": "Data Visualization with Tableau",
+    "provider": "NIT Trichy",
+    "duration_hours": 12,
+    "skills_covered": ["Data Visualization", "Tableau", "Dashboard Design"],
+    "level": "Intermediate",
+    "description": "Create impactful data visualizations and dashboards"
+  },
+  {
+    "course_id": "iGOT004",
+    "title": "Machine Learning for Official Statistics",
+    "provider": "ISI Kolkata",
+    "duration_hours": 30,
+    "skills_covered": ["Machine Learning", "Python", "Scikit-learn"],
+    "level": "Advanced",
+    "description": "Apply ML techniques to official statistics"
+  },
+  {
+    "course_id": "iGOT005",
+    "title": "R for Statistical Computing",
+    "provider": "IIT Bombay",
+    "duration_hours": 18,
+    "skills_covered": ["R", "Statistical Computing", "Data Analysis"],
+    "level": "Intermediate",
+    "description": "Master R programming for statistical analysis"
+  },
+  {
+    "course_id": "iGOT006",
+    "title": "Survey Design and Sampling Techniques",
+    "provider": "ISI Delhi",
+    "duration_hours": 25,
+    "skills_covered": ["Survey Design", "Sampling", "Questionnaire Design"],
+    "level": "Intermediate",
+    "description": "Learn principles of survey design and sampling"
+  },
+  {
+    "course_id": "iGOT007",
+    "title": "Leadership and Team Management",
+    "provider": "IIM Ahmedabad",
+    "duration_hours": 20,
+    "skills_covered": ["Leadership", "Team Management", "Communication"],
+    "level": "Advanced",
+    "description": "Develop leadership skills for government service"
+  },
+  {
+    "course_id": "iGOT008",
+    "title": "National Accounts System",
+    "provider": "CSO India",
+    "duration_hours": 35,
+    "skills_covered": ["National Accounts", "GDP Calculation"],
+    "level": "Advanced",
+    "description": "Comprehensive course on national accounting systems"
+  },
+  {
+    "course_id": "iGOT009",
+    "title": "SQL for Data Management",
+    "provider": "NIT Warangal",
+    "duration_hours": 15,
+    "skills_covered": ["SQL", "Database Management"],
+    "level": "Basic",
+    "description": "Learn SQL for managing and querying databases"
+  },
+  {
+    "course_id": "iGOT010",
+    "title": "Project Management for Government",
+    "provider": "IIM Bangalore",
+    "duration_hours": 22,
+    "skills_covered": ["Project Management", "Planning", "Execution"],
+    "level": "Intermediate",
+    "description": "Manage government projects effectively"
+  },
+  {
+    "course_id": "iGOT011",
+    "title": "Advanced Excel for Statisticians",
+    "provider": "NIELIT",
+    "duration_hours": 10,
+    "skills_covered": ["Excel", "Advanced Formulas", "Pivot Tables"],
+    "level": "Intermediate",
+    "description": "Master advanced Excel techniques for statistical work"
+  },
+  {
+    "course_id": "iGOT012",
+    "title": "Data Privacy and Cybersecurity",
+    "provider": "CERT-In",
+    "duration_hours": 12,
+    "skills_covered": ["Cybersecurity", "Data Privacy", "Digital Signatures"],
+    "level": "Basic",
+    "description": "Essential cybersecurity for government officials"
+  },
+  {
+    "course_id": "iGOT013",
+    "title": "Cloud Computing for Government",
+    "provider": "MeitY",
+    "duration_hours": 18,
+    "skills_covered": ["Cloud Computing", "Government Cloud", "AWS", "Azure"],
+    "level": "Intermediate",
+    "description": "Cloud computing fundamentals for government services"
+  },
+  {
+    "course_id": "iGOT014",
+    "title": "Agricultural Statistics and Analysis",
+    "provider": "ICAR",
+    "duration_hours": 20,
+    "skills_covered": ["Agricultural Statistics", "Crop Estimation", "Data Collection"],
+    "level": "Intermediate",
+    "description": "Statistical methods for agricultural data"
+  },
+  {
+    "course_id": "iGOT015",
+    "title": "Industrial Statistics and Index Numbers",
+    "provider": "CSO India",
+    "duration_hours": 25,
+    "skills_covered": ["Industrial Statistics", "Index Numbers", "IIP"],
+    "level": "Advanced",
+    "description": "Industrial statistics and index number calculation"
+  }
+]

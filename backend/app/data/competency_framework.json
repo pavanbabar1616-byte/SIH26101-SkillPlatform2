@@ -1,0 +1,28 @@
+{
+  "Junior Statistician": {
+    "required_skills": [
+      {"skill": "Python", "level": "Intermediate", "priority": "High"},
+      {"skill": "SDG Indicators", "level": "Basic", "priority": "High"},
+      {"skill": "Data Visualization", "level": "Intermediate", "priority": "Medium"},
+      {"skill": "Survey Design", "level": "Intermediate", "priority": "High"},
+      {"skill": "Excel", "level": "Advanced", "priority": "High"}
+    ]
+  },
+  "Senior Statistician": {
+    "required_skills": [
+      {"skill": "Machine Learning", "level": "Intermediate", "priority": "High"},
+      {"skill": "Leadership", "level": "Advanced", "priority": "High"},
+      {"skill": "Project Management", "level": "Intermediate", "priority": "High"},
+      {"skill": "Python", "level": "Advanced", "priority": "High"},
+      {"skill": "National Accounts", "level": "Advanced", "priority": "High"}
+    ]
+  },
+  "Data Analyst": {
+    "required_skills": [
+      {"skill": "Python", "level": "Advanced", "priority": "High"},
+      {"skill": "SQL", "level": "Advanced", "priority": "High"},
+      {"skill": "Data Visualization", "level": "Advanced", "priority": "High"},
+      {"skill": "Machine Learning", "level": "Intermediate", "priority": "Medium"}
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "employee_id": "EMP001",
+    "name": "Rajesh Kumar",
+    "designation": "Junior Statistician",
+    "department": "Labour Statistics",
+    "education": "M.Sc. Statistics",
+    "experience_years": 3,
+    "current_skills": ["SPSS", "Survey Design", "Excel", "Data Collection"]
+  },
+  {
+    "employee_id": "EMP002",
+    "name": "Priya Sharma",
+    "designation": "Senior Statistician",
+    "department": "National Accounts",
+    "education": "Ph.D. Economics",
+    "experience_years": 8,
+    "current_skills": ["R", "Python", "National Accounts", "Leadership", "Project Management"]
+  },
+  {
+    "employee_id": "EMP003",
+    "name": "Amit Patel",
+    "designation": "Data Analyst",
+    "department": "Agriculture Statistics",
+    "education": "B.Tech Computer Science",
+    "experience_years": 2,
+    "current_skills": ["Python", "SQL", "Excel", "Data Visualization"]
+  },
+  {
+    "employee_id": "EMP004",
+    "name": "Sneha Reddy",
+    "designation": "Junior Statistician",
+    "department": "Price Statistics",
+    "education": "M.Sc. Economics",
+    "experience_years": 1,
+    "current_skills": ["Excel", "Data Entry", "Report Writing"]
+  },
+  {
+    "employee_id": "EMP005",
+    "name": "Vikram Singh",
+    "designation": "Senior Statistician",
+    "department": "Industrial Statistics",
+    "education": "M.Phil Statistics",
+    "experience_years": 10,
+    "current_skills": ["SAS", "SPSS", "Survey Design", "Team Management", "Industrial Statistics"]
+  }
+]

@@ -9,7 +9,7 @@ from groq import Groq
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 client = Groq(api_key=GROQ_API_KEY) if GROQ_API_KEY else None
 
-MODEL_NAME = "llama-3.1-8b-instant"
+MODEL_NAME = "llama-3.3-70b-versatile"
 
 SYSTEM_PROMPT = """You are SkillIntel Assistant — an AI helper built into the Skill Intelligence Platform (SIH26101) for Government of India officials.
 

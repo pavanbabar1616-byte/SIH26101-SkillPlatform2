@@ -1,0 +1,13 @@
+# Window 1
+ollama serve
+
+# Window 2
+cd C:\Users\Pavan\Desktop\SIH26101-New\backend
+python -m uvicorn app.main:app --reload --port 8000
+
+# Window 3
+cd C:\Users\Pavan\Desktop\SIH26101-New\frontend
+npm run dev
+
+cd C:\Users\Pavan\Desktop\SIH26101-New\frontend
+node "C:\Users\Pavan\AppData\Roaming\npm\node_modules\pnpm\bin\pnpm.cjs" dev

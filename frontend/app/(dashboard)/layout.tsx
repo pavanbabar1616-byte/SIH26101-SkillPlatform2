@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { TopBar } from "@/components/layout/TopBar";
+import { ChatWidget } from "@/components/shared/ChatWidget";
 import { useAuthStore } from "@/stores/authStore";
 
 export default function DashboardLayout({
@@ -15,7 +16,6 @@ export default function DashboardLayout({
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
 
   useEffect(() => {
-    // Redirect to signin if not authenticated
     if (!isAuthenticated) {
       router.push("/signin");
     }
@@ -38,6 +38,7 @@ export default function DashboardLayout({
           <div className="max-w-7xl mx-auto">{children}</div>
         </main>
       </div>
+      <ChatWidget />
     </div>
   );
 }

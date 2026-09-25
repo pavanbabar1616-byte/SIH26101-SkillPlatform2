@@ -92,4 +92,20 @@ export const api = {
   },
   getOllamaStatus: () =>
     request<{ running: boolean; models: string[] }>("/api/v1/quiz/status"),
+
+  // ===== Chatbot =====
+  chatWithBot: (
+    message: string,
+    history: { role: string; content: string }[] = [],
+    context?: any
+  ) =>
+    request<{ reply: string; error: string | null }>("/api/v1/chatbot/chat", {
+      method: "POST",
+      body: JSON.stringify({ message, history, context }),
+    }),
+
+  getChatbotStatus: () =>
+    request<{ running: boolean; model: string; available: boolean }>(
+      "/api/v1/chatbot/status"
+    ),
 };

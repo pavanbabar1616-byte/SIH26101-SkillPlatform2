@@ -56,10 +56,19 @@ export interface QuizQuestion {
   explanation: string;
 }
 
+// Headers that bypass ngrok's browser warning page
+const BASE_HEADERS = {
+  "ngrok-skip-browser-warning": "true",
+};
+
 async function request<T>(endpoint: string, options?: RequestInit): Promise<T> {
   const response = await fetch(`${API_URL}${endpoint}`, {
     ...options,
-    headers: { "Content-Type": "application/json", ...options?.headers },
+    headers: {
+      "Content-Type": "application/json",
+      ...BASE_HEADERS,
+      ...options?.headers,
+    },
   });
   if (!response.ok) throw new Error(`API error: ${response.statusText}`);
   return response.json();
@@ -85,7 +94,11 @@ export const api = {
     formData.append("file", file);
     const response = await fetch(
       `${API_URL}/api/v1/quiz/generate?num_questions=${numQuestions}`,
-      { method: "POST", body: formData }
+      {
+        method: "POST",
+        body: formData,
+        headers: { ...BASE_HEADERS },
+      }
     );
     if (!response.ok) throw new Error("Quiz generation failed");
     return response.json();
@@ -93,7 +106,6 @@ export const api = {
   getOllamaStatus: () =>
     request<{ running: boolean; models: string[] }>("/api/v1/quiz/status"),
 
-  // ===== Chatbot =====
   chatWithBot: (
     message: string,
     history: { role: string; content: string }[] = [],

@@ -1,14 +1,20 @@
 """
-Quiz Generator using Ollama
+Quiz Generator using Groq API
 Generates MCQs from uploaded documents.
 """
 
-import requests
+import os
 import json
 import re
 import PyPDF2
 from io import BytesIO
-from ..core.config import settings
+from groq import Groq
+
+# Initialize Groq client
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+client = Groq(api_key=GROQ_API_KEY) if GROQ_API_KEY else None
+
+MODEL_NAME = "llama-3.1-8b-instant"
 
 
 def extract_text_from_pdf(file_content: bytes) -> str:
@@ -23,6 +29,9 @@ def extract_text_from_pdf(file_content: bytes) -> str:
 
 
 def generate_quiz(document_text: str, num_questions: int = 5) -> list:
+    if not client:
+        return [{"error": "GROQ_API_KEY is not set. Please configure it in Render environment variables."}]
+
     max_chars = 3000
     if len(document_text) > max_chars:
         document_text = document_text[:max_chars]
@@ -52,23 +61,19 @@ Text:
 JSON:"""
 
     try:
-        response = requests.post(
-            f'{settings.OLLAMA_URL}/api/generate',
-            json={
-                "model": settings.OLLAMA_MODEL,
-                "prompt": prompt,
-                "stream": False,
-                "options": {"temperature": 0.7, "num_predict": 2000}
-            },
-            timeout=180
+        response = client.chat.completions.create(
+            model=MODEL_NAME,
+            messages=[
+                {"role": "system", "content": "You are an expert educator that generates multiple choice questions. Always return valid JSON."},
+                {"role": "user", "content": prompt}
+            ],
+            temperature=0.7,
+            max_tokens=2000,
         )
         
-        result = response.json()
-        response_text = result.get('response', '')
+        response_text = response.choices[0].message.content
         return parse_quiz_response(response_text)
         
-    except requests.exceptions.ConnectionError:
-        return [{"error": "Ollama is not running. Please start Ollama."}]
     except Exception as e:
         return [{"error": f"Quiz generation failed: {str(e)}"}]
 
@@ -97,14 +102,12 @@ def parse_quiz_response(response_text: str) -> list:
 
 
 def check_ollama_status() -> dict:
-    try:
-        response = requests.get(f'{settings.OLLAMA_URL}/api/tags', timeout=5)
-        models = response.json().get('models', [])
-        model_names = [m['name'] for m in models]
+    """Check if Groq API is configured."""
+    if client:
         return {
             "running": True,
-            "models": model_names,
-            "mistral_available": any('mistral' in m for m in model_names)
+            "models": [MODEL_NAME],
+            "mistral_available": True,
+            "provider": "groq"
         }
-    except:
-        return {"running": False, "models": [], "mistral_available": False}
+    return {"running": False, "models": [], "mistral_available": False}

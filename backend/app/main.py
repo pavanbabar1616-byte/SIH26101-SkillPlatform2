@@ -11,10 +11,10 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],          # Allows your Vercel URL
-    allow_credentials=False,      # Must be False when using "*"
-    allow_methods=["*"],          # Allows OPTIONS, GET, POST, etc.
-    allow_headers=["*"],          # Allows all headers
+    allow_origins=["*"],
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # Register routers

@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60
     OLLAMA_URL: str = "http://localhost:11434"
     OLLAMA_MODEL: str = "mistral"
-    CORS_ORIGINS: str = "http://localhost:3000"
+    CORS_ORIGINS: str = "http://localhost:3000,https://sih-26101-skill-platform2-seven.vercel.app"
 
     @property
     def cors_origins_list(self) -> List[str]:
